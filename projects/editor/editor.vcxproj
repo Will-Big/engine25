@@ -179,8 +179,8 @@ xcopy /Y /D "$(SolutionDir)libs\graphics\$(Configuration)\*.cso" "$(TargetDir)"<
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\graphics\graphics.vcxproj">
-      <Project>{c57d8601-512a-4266-b799-2f5584ac5527}</Project>
+    <ProjectReference Include="..\engine\engine.vcxproj">
+      <Project>{2af45fb0-d970-43ab-b47f-957862819d54}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

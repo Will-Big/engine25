@@ -9,7 +9,6 @@
 
 #pragma comment(lib, "graphics.lib")
 
-
 int CALLBACK WinMain(HINSTANCE hInstance, HINSTANCE, LPSTR, int)
 {
 	constexpr int windowWidth = 1366;
