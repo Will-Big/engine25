@@ -1,5 +1,6 @@
 ﻿#include "pch.h"
 #include "Renderer.h"
+#include "GraphicsResourceManager.h"
 
 #include <d3dcompiler.h>
 
@@ -17,6 +18,8 @@ namespace graphics
 		void Initialize(HWND hWnd, UINT width, UINT height) override;
 
 		void Render() override;
+
+		IGraphicsResourceManager* GetResourceManager() override;
 
 	private:
 		void createDeviceAndFactory();
@@ -64,6 +67,9 @@ namespace graphics
 
 		ComPtr<ID3D12DescriptorHeap>		_cbvSrvUavHeap;
 		CD3DX12_GPU_DESCRIPTOR_HANDLE		_gpuHandleStart = {};
+
+		// 리소스 매니저
+		std::unique_ptr<IGraphicsResourceManager> _resourceManager;
 	};
 
 	RendererImpl::~RendererImpl()
@@ -112,6 +118,11 @@ namespace graphics
 
 		// 이전 프레임이 완전히 끝날 때까지 대기하고 인덱스 갱신
 		waitForPreviousFrame();
+	}
+
+	IGraphicsResourceManager* RendererImpl::GetResourceManager()
+	{
+		return nullptr; // TODO
 	}
 
 	// extern "C" 팩토리 구현

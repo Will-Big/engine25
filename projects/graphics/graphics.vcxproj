@@ -20,6 +20,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\graphics\GraphicsExports.h" />
+    <ClInclude Include="include\graphics\GraphicsResourceManager.h" />
+    <ClInclude Include="include\graphics\GraphicsTypes.h" />
     <ClInclude Include="include\graphics\Mesh.h" />
     <ClInclude Include="include\graphics\Renderer.h" />
     <ClInclude Include="include\graphics\VertexStructs.h" />
@@ -30,6 +32,8 @@
     <ClInclude Include="internal\Utils.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\GraphicsResourceManager.cpp" />
+    <ClCompile Include="src\Mesh.cpp" />
     <ClCompile Include="src\MeshResource.cpp" />
     <ClCompile Include="src\pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>

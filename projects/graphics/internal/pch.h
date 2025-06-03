@@ -7,6 +7,7 @@
 
 #include <Windows.h>
 #include <wrl.h>
+#include <memory>
 
 #include <d3dx12.h>
 #include <dxgi1_6.h>

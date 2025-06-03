@@ -51,6 +51,12 @@
     <ClInclude Include="include\graphics\VertexStructs.h">
       <Filter>헤더 파일\include</Filter>
     </ClInclude>
+    <ClInclude Include="include\graphics\GraphicsResourceManager.h">
+      <Filter>헤더 파일\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\graphics\GraphicsTypes.h">
+      <Filter>헤더 파일\include</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\pch.cpp">
@@ -63,6 +69,12 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="src\MeshResource.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Mesh.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GraphicsResourceManager.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
