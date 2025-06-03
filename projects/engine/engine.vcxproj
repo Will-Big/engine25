@@ -118,12 +118,15 @@
       <AdditionalIncludeDirectories>$(SolutionDir)external\include\;$(SolutionDir)projects\graphics\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(SolutionDir)libs\graphics\$(Configuration);$(SolutionDir)external\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy /Y /D "$(SolutionDir)external\bin\*.dll" "$(TargetDir)"</Command>
+      <Command>xcopy /Y /D "$(SolutionDir)external\bin\*.dll" "$(TargetDir)"
+xcopy /Y /D "$(SolutionDir)libs\graphics\$(Configuration)\*.dll" "$(TargetDir)"
+xcopy /Y /D "$(SolutionDir)libs\graphics\$(Configuration)\*.pdb" "$(TargetDir)"
+xcopy /Y /D "$(SolutionDir)libs\graphics\$(Configuration)\*.cso" "$(TargetDir)"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -138,14 +141,17 @@
       <AdditionalIncludeDirectories>$(SolutionDir)external\include\;$(SolutionDir)projects\graphics\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(SolutionDir)libs\graphics\$(Configuration);$(SolutionDir)external\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy /Y /D "$(SolutionDir)external\bin\*.dll" "$(TargetDir)"</Command>
+      <Command>xcopy /Y /D "$(SolutionDir)external\bin\*.dll" "$(TargetDir)"
+xcopy /Y /D "$(SolutionDir)libs\graphics\$(Configuration)\*.dll" "$(TargetDir)"
+xcopy /Y /D "$(SolutionDir)libs\graphics\$(Configuration)\*.pdb" "$(TargetDir)"
+xcopy /Y /D "$(SolutionDir)libs\graphics\$(Configuration)\*.cso" "$(TargetDir)"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
